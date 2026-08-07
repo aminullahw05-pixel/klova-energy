@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, DM_Sans, DM_Mono } from "next/font/google";
+import { Space_Grotesk, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
+const displayFont = Space_Grotesk({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
+  weight: "600",
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -37,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${dmSans.variable} ${dmMono.variable} font-sans`}
+        className={`${displayFont.variable} ${dmSans.variable} ${dmMono.variable} font-sans`}
       >
         {children}
       </body>

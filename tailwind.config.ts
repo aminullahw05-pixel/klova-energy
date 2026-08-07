@@ -26,7 +26,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
+        // headline/display face — class kept as "font-serif" for historical
+        // reasons even though the current face (Space Grotesk) is a sans.
+        serif: ["var(--font-display)", "system-ui", "sans-serif"],
         sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-dm-mono)", "monospace"],
       },
