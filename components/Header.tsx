@@ -1,10 +1,22 @@
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({
+  logoHref = "#top",
+  ctaHref = "#contact",
+  ctaLabel = "Get a quote",
+  ctaLabelShort,
+  secondaryLink,
+}: {
+  logoHref?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  ctaLabelShort?: string;
+  secondaryLink?: { href: string; label: string };
+}) {
   return (
     <header className="sticky top-0 z-50 border-b border-navy/10 bg-ghost/90 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-4 sm:px-10">
-        <a href="#top" className="flex items-center gap-2.5">
+        <a href={logoHref} className="flex items-center gap-2.5">
           <Image
             src="/logo-mark-dark.png"
             alt=""
@@ -22,12 +34,23 @@ export default function Header() {
             priority
           />
         </a>
-        <a
-          href="#contact"
-          className="rounded-full bg-emerald px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-dark"
-        >
-          Get a quote
-        </a>
+        <div className="flex items-center gap-5">
+          {secondaryLink && (
+            <a
+              href={secondaryLink.href}
+              className="hidden text-sm font-medium text-navy/70 hover:text-navy sm:block"
+            >
+              {secondaryLink.label}
+            </a>
+          )}
+          <a
+            href={ctaHref}
+            className="shrink-0 whitespace-nowrap rounded-full bg-emerald px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-dark sm:px-5"
+          >
+            <span className="sm:hidden">{ctaLabelShort ?? ctaLabel}</span>
+            <span className="hidden sm:inline">{ctaLabel}</span>
+          </a>
+        </div>
       </div>
     </header>
   );

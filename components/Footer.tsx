@@ -23,6 +23,9 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-6">
+          <a href="/trade" className="hover:text-navy">
+            Trade Accounts
+          </a>
           <a href="/terms" className="hover:text-navy">
             Terms of Service
           </a>
