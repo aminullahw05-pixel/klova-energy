@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function LegalPage({
   title,
   updated,
@@ -11,8 +13,21 @@ export default function LegalPage({
     <div className="min-h-screen bg-ghost">
       <header className="border-b border-navy/10">
         <div className="mx-auto max-w-content px-6 py-4 sm:px-10">
-          <a href="/" className="font-serif text-2xl tracking-tight text-navy">
-            Klova Energy
+          <a href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/logo-mark-dark.png"
+              alt=""
+              width={215}
+              height={209}
+              className="h-8 w-auto"
+            />
+            <Image
+              src="/logo-wordmark-dark.png"
+              alt="Klova Energy"
+              width={442}
+              height={89}
+              className="h-5 w-auto"
+            />
           </a>
         </div>
       </header>
