@@ -1,20 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-
-const COMPANY_TYPES = [
-  "Estate Agent",
-  "Letting Agent",
-  "Housing Management Company",
-  "Other",
-];
-
-const PORTFOLIO_SIZES = [
-  "Fewer than 10 properties",
-  "10–50 properties",
-  "50–200 properties",
-  "200+ properties",
-];
+import { COMPANY_TYPES, PORTFOLIO_SIZES } from "@/lib/constants";
 
 export default function TradeForm() {
   const [submitted, setSubmitted] = useState(false);
