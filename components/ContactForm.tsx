@@ -1,14 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-
-const SERVICES = [
-  "EPC (Energy Performance Certificate)",
-  "Gas Safety Certificate (CP12)",
-  "EICR (Electrical Installation Condition Report)",
-  "Floorplan",
-  "Landlord Compliance Bundle",
-];
+import { SERVICES } from "@/lib/constants";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);

@@ -7,18 +7,21 @@ const PLACEHOLDER_REVIEWS = [
       "Placeholder testimonial text — replace with a real customer quote before launch.",
     name: "[Customer name]",
     context: "[Property type / location]",
+    accent: "bg-coral",
   },
   {
     quote:
       "Placeholder testimonial text — replace with a real customer quote before launch.",
     name: "[Customer name]",
     context: "[Property type / location]",
+    accent: "bg-emerald",
   },
   {
     quote:
       "Placeholder testimonial text — replace with a real customer quote before launch.",
     name: "[Customer name]",
     context: "[Property type / location]",
+    accent: "bg-navy-light",
   },
 ];
 
@@ -38,12 +41,18 @@ export default function Testimonials() {
               key={i}
               className="flex flex-col rounded-2xl border border-navy/10 bg-white p-7"
             >
-              <p className="flex-1 font-serif text-xl italic leading-relaxed text-navy/70">
-                &ldquo;{review.quote}&rdquo;
+              <span className="font-serif text-5xl leading-none text-navy/15">
+                &ldquo;
+              </span>
+              <p className="mt-2 flex-1 font-serif text-xl italic leading-relaxed text-navy/70">
+                {review.quote}
               </p>
-              <p className="mt-6 font-mono text-xs uppercase tracking-wide text-navy/50">
-                {review.name} — {review.context}
-              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <span className={`h-8 w-8 shrink-0 rounded-full ${review.accent}`} />
+                <p className="font-mono text-xs uppercase tracking-wide text-navy/50">
+                  {review.name} — {review.context}
+                </p>
+              </div>
             </div>
           ))}
         </div>

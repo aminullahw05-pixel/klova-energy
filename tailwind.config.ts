@@ -19,6 +19,11 @@ const config: Config = {
           light: "#12B981",
           dark: "#0B7A54",
         },
+        coral: {
+          DEFAULT: "#E8582F",
+          light: "#F17B52",
+          dark: "#C0431E",
+        },
       },
       fontFamily: {
         serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
