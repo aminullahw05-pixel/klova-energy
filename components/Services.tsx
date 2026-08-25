@@ -89,7 +89,24 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 flex items-center gap-3 rounded-2xl bg-coral px-5 py-4 sm:px-6">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/20">
+            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+              <path
+                d="M20 12.5 12.5 20a2 2 0 0 1-2.83 0l-6.67-6.67a2 2 0 0 1 0-2.83L10.5 3H18a2 2 0 0 1 2 2v7.5Z"
+                stroke="white"
+                strokeWidth="1.6"
+                strokeLinejoin="round"
+              />
+              <circle cx="15" cy="8" r="1.4" fill="white" />
+            </svg>
+          </span>
+          <p className="font-serif text-lg leading-snug text-white sm:text-xl">
+            See a price on this page? Spoiler: it&apos;s the same one at checkout.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.name}
