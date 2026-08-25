@@ -89,21 +89,33 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-8 flex items-center gap-3 rounded-2xl bg-coral px-5 py-4 sm:px-6">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/20">
-            <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
+        <div className="mt-8 flex items-start gap-4 rounded-2xl bg-coral px-5 py-5 sm:items-center sm:px-6">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20">
+            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
               <path
-                d="M20 12.5 12.5 20a2 2 0 0 1-2.83 0l-6.67-6.67a2 2 0 0 1 0-2.83L10.5 3H18a2 2 0 0 1 2 2v7.5Z"
+                d="M12 3.5 19 6.5v5c0 5-3 8.2-7 9.9-4-1.7-7-4.9-7-9.9v-5l7-3Z"
                 stroke="white"
                 strokeWidth="1.6"
                 strokeLinejoin="round"
               />
-              <circle cx="15" cy="8" r="1.4" fill="white" />
+              <path
+                d="M8.75 12.2 11 14.4l4.25-4.7"
+                stroke="white"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </span>
-          <p className="font-serif text-lg leading-snug text-white sm:text-xl">
-            See a price on this page? Spoiler: it&apos;s the same one at checkout.
-          </p>
+          <div>
+            <p className="font-serif text-lg leading-snug text-white sm:text-xl">
+              We show up, or you don&apos;t pay.
+            </p>
+            <p className="mt-1 text-sm leading-snug text-white/75">
+              If we&apos;re unable to get an assessor to your property for
+              your booked appointment, you&apos;ll receive a full refund.
+            </p>
+          </div>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
